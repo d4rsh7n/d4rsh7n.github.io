@@ -1,0 +1,133 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Dark background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Game container */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Responsive for phones */
+    height: 100vh;
+}
+
+/* Game area */
+#game-area {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Adjust for mobile */
+    background-color: #111; /* Darker game area */
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+/* Player */
+#player {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #ff0; /* Bright yellow player */
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Score */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Game over */
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#game-over.hidden {
+    display: none;
+}
+
+#restart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Controls */
+#controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#left-btn, #right-btn {
+    width: 48%;
+    height: 50px;
+    font-size: 24px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Enemies and collectibles */
+.enemy {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #f00; /* Bright red enemy */
+    border-radius: 50%;
+}
+
+.collectible {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #0f0; /* Bright green collectible */
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #game-area {
+        height: 70vh;
+    }
+    #controls {
+        padding: 5px;
+    }
+    #left-btn, #right-btn {
+        height: 40px;
+    }
+}
+
